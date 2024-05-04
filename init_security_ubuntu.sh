@@ -2,9 +2,14 @@
 
 # Ensure script is run as root
 if [ "$EUID" -ne 0 ]; then
-    echo "Please run this script as root"
-    exit
+	echo "Please run this script as root"
+	exit
 fi
+
+# install vim and add plugins
+echo "Take care of Vim"
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # Update package repositories and upgrade installed packages
 echo "Updating package repositories and upgrading installed packages..."
