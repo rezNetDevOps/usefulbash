@@ -13,7 +13,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # Update package repositories and upgrade installed packages
 echo "Updating package repositories and upgrading installed packages..."
-apt update && apt upgrade -y
+apt-get -y update && apt-get -y upgrade
 
 # Enable firewall (UFW) and allow SSH, HTTP, and HTTPS traffic
 echo "Configuring firewall (UFW)..."
