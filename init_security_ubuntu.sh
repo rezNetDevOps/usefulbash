@@ -16,7 +16,9 @@ echo "Updating package repositories and upgrading installed packages..."
 apt-get -y update && apt-get -y upgrade
 
 # useradd -m -G sudo -s /bin/bash jenkins && passwd -d jenkins
-
+# mkdir /home/jenkins/.ssh
+# cp ~/.ssh/authorized_keys /home/jenkins/.ssh/
+# chown -R jenkins:jenkins /home/jenkins/.ssh/
 # Enable firewall (UFW) and allow SSH, HTTP, and HTTPS traffic
 echo "Configuring firewall (UFW)..."
 ufw allow OpenSSH
