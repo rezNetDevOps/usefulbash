@@ -19,6 +19,7 @@ apt-get -y update && apt-get -y upgrade
 # mkdir /home/jenkins/.ssh
 # cp ~/.ssh/authorized_keys /home/jenkins/.ssh/
 # chown -R jenkins:jenkins /home/jenkins/.ssh/
+
 # Enable firewall (UFW) and allow SSH, HTTP, and HTTPS traffic
 echo "Configuring firewall (UFW)..."
 ufw allow OpenSSH
